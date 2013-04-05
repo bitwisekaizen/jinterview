@@ -1,6 +1,7 @@
 package com.thegrayfiles;
 
-public class EndOfQueueElement extends QueueElement {
+public class EndOfQueueElement<T extends Comparable<T>> extends QueueElement<T> {
+
     public EndOfQueueElement() {
         super(null);
     }

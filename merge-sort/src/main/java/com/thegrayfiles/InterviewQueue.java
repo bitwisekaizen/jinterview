@@ -11,12 +11,12 @@ public class InterviewQueue<T extends Comparable<T>> {
     public InterviewQueue(List<T> list) {
         iterator = list.iterator();
         if (list.size() == 0) {
-            currentElement = new EndOfQueueElement();
+            currentElement = new EndOfQueueElement<T>();
         }
     }
 
     public QueueElement<T> shift() {
-        currentElement = iterator.hasNext() ? new QueueElement<T>(iterator.next()) : new EndOfQueueElement();
+        currentElement = iterator.hasNext() ? new QueueElement<T>(iterator.next()) : new EndOfQueueElement<T>();
         return currentElement;
     }
 

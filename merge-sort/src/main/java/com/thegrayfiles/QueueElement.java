@@ -9,10 +9,10 @@ public class QueueElement<T extends Comparable> implements Comparable<QueueEleme
     }
 
     public int compareTo(QueueElement<T> t) {
-        if (this.getValue() == null) {
-            return t.getValue() == null ? 0 : 1;
+        if (this instanceof EndOfQueueElement) {
+            return t instanceof EndOfQueueElement ? 0 : 1;
         } else {
-            return t.getValue() == null ? -1 : getValue().compareTo(t.getValue());
+            return t instanceof EndOfQueueElement ? -1 : getValue().compareTo(t.getValue());
         }
     }
 

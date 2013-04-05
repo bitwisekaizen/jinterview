@@ -12,8 +12,8 @@ public class ListMerger<T extends Comparable<T>> {
 
         List<T> result = new ArrayList<T>();
 
-        InterviewQueue aQueue = new InterviewQueue(listA);
-        InterviewQueue bQueue = new InterviewQueue(listB);
+        InterviewQueue aQueue = new InterviewQueue<T>(listA);
+        InterviewQueue bQueue = new InterviewQueue<T>(listB);
 
         QueueElement<T> aElement = aQueue.shift();
         QueueElement<T> bElement = bQueue.shift();
